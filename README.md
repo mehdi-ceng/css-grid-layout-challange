@@ -1,4 +1,4 @@
-------THIS CHALLANGE IS CREATED BY zachgoll[https://github.com/zachgoll/holy-grail-css-layout] and I used his youtube video[https://www.youtube.com/watch?v=BIx3XdHA8-Y&t=11664s] to solve this challenge---------------
+THIS CHALLANGE IS CREATED BY zachgoll[https://github.com/zachgoll/holy-grail-css-layout] and I used his youtube video[https://www.youtube.com/watch?v=BIx3XdHA8-Y&t=11664s] to solve this challenge
 
 ## Project Overview
 
