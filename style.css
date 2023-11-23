@@ -18,6 +18,12 @@ html {
 
 a {
   color: #71d99e;
+  cursor: pointer;
+}
+
+.nav-link,
+.header-link {
+  cursor: pointer;
 }
 
 /************************
@@ -49,12 +55,10 @@ header {
 }
 
 nav {
-  background-color: red;
   grid-area: nav_area;
 }
 
 .main-content-grid {
-  background-color: yellowgreen;
   grid-area: main_content_area;
 }
 
@@ -74,17 +78,14 @@ MAIN-CONTENT-GRID
 
 main {
   grid-area: main_area;
-  background-color: brown;
 }
 
 aside {
   grid-area: aside_area;
-  background-color: goldenrod;
 }
 
 footer {
   grid-area: footer_area;
-  background-color: burlywood;
 }
 
 /********************
@@ -131,10 +132,112 @@ header {
 .header-right a {
   font-size: 0.9rem;
 }
+
+/***************************
+ARTICLE STYLES (AND ASIDE)
+******************************/
+main,
+aside {
+  padding: 5% 30px;
+}
+
+h1,
+h2,
+h3 {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+img {
+  border-radius: 3%;
+  box-shadow: -1px -1px 19px 2px rgba(0, 0, 0, 0.26);
+  margin-top: 10px;
+  margin-bottom: 20px;
+  max-width: 100%;
+}
+
+/***********************
+COLLAGE GRID
+***********************/
+.collage {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 30px 1fr 30px 1fr;
+  align-items: center;
+}
+
+.collage * {
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.collage-1 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  z-index: 1;
+  transform: rotate(-4deg);
+}
+
+.collage-2 {
+  grid-column-start: 2;
+  grid-column-end: 5;
+  z-index: 2;
+}
+
+.collage-3 {
+  grid-column-start: 4;
+  grid-column-end: 6;
+  z-index: 1;
+  transform: rotate(4deg);
+}
+
+/*********************
+NAV BAR
+***************************/
+
+nav {
+  padding: 25px;
+}
+
+.nav-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.nav-link i {
+  color: #1e4040;
+}
+
+.nav-link a {
+  color: #1e4040;
+}
+
+/*******************
+FOOTER
+**************************/
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #1e4040;
+  color: white;
+  font-size: 0.8rem;
+}
+
 /************************
 DIFFERENT SCREEN SIZES
 ****************************/
 @media (min-width: 576px) {
+  #show-nav {
+    display: block;
+  }
   .outer-grid {
     grid-template-areas:
       "header_area  header_area"
@@ -162,6 +265,13 @@ DIFFERENT SCREEN SIZES
     grid-template-areas:
       "header_area header_area       header_area"
       "nav_area    main_content_area main_content_area";
+  }
+
+  #show-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-right: 10px;
   }
 
   header {
